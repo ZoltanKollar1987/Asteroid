@@ -20,8 +20,7 @@ public class SpaceShip : MonoBehaviour
    
     void FixedUpdate()
     {
-        Movement();
-        
+        Movement();   
     }
     private void Update()
     {

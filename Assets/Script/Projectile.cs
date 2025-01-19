@@ -26,9 +26,7 @@ public class Projectile : MonoBehaviour
         if (currentDistance > maxDistance)
         {
             Destroy(gameObject);
-        }
-        
-       
+        }      
     }
 
     

@@ -26,12 +26,10 @@ public class Asteroid : MonoBehaviour
     void Awake()
     {
         
-
         asteroidRb = this.GetComponent<Rigidbody2D>();
         asteroidManager = FindAnyObjectByType<AsteroidManager>();
         gameManager = FindAnyObjectByType<GameManager>(); 
         
-
     }
     private void Start()
     {
