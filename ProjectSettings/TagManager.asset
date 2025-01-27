@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Projectile
   - Asteroid
+  - Ufo
+  - UfoProjectile
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Player
   - Projectile
   - Asteroid
-  - 
+  - Ufo
   - 
   - 
   - 

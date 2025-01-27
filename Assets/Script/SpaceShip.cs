@@ -10,6 +10,7 @@ public class SpaceShip : MonoBehaviour
    [SerializeField] private int rotationSide;
    [SerializeField] private GameObject projectile;
    [SerializeField] private GameObject projectileSpawner;
+   [SerializeField] AudioClip shootSound;
    
 
 
@@ -69,7 +70,8 @@ public class SpaceShip : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
+            SoundManager.Instance.PlaySound(shootSound);
+
             Instantiate(projectile,projectileSpawner.transform.position, this.transform.rotation);
 
         }

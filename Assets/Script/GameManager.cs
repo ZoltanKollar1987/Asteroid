@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject loseMenu;
     [SerializeField] GameObject winMenu;
 
-    [SerializeField] string currentSceneName;
+    [SerializeField] AudioClip loseLifeSound;
+
+    string currentSceneName;
 
     private void Awake()
     {
@@ -64,13 +66,14 @@ public class GameManager : MonoBehaviour
     }
     public void LosePlayerLife()
     {
+        SoundManager.Instance.PlaySound(loseLifeSound);
         playerLife--;
-        lifeNum.text = playerLife.ToString();
+        lifeNum.text = playerLife.ToString();  
         ResetPlayer();
     }
     public void GameOver()
     {
-        if(playerLife == 0)
+        if(playerLife <= 0)
         {
             Destroy(player);
             LoseMenu();

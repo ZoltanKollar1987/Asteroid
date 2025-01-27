@@ -11,6 +11,7 @@ public class AsteroidManager : MonoBehaviour
     [SerializeField] int initialspawn;
     [SerializeField] GameObject[] initialAsteroidSpawnerPos;
     [SerializeField] public List<GameObject> asteroidsList;
+    [SerializeField] AudioClip explodingAsteroidSound;
     
 
     
@@ -26,7 +27,8 @@ public class AsteroidManager : MonoBehaviour
     
     public void CrackAsteroids(int type, Vector2 position, GameObject asteroid)
     {
-       
+        SoundManager.Instance.PlaySound(explodingAsteroidSound);
+
         if (type == 1)
         {
             asteroid = mediumAsteroid;        
